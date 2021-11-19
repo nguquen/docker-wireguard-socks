@@ -3,17 +3,11 @@
 This container image runs Wireguard + SOCKS proxy.
 
 ```bash
-docker run 
-    --name wireguardproxy
-    --privileged
-    -v /path/to/conf/wgcf.conf:/etc/wireguard/wgcf.conf
-    -p 1080:1080
-    diwu1989/wireguardproxy
+./build.sh
+./start.sh
 ```
 
-Default SOCKS5 proxy auth is `proxy:wireguard`
+Testing
 ```
-curl --socks5 proxy:wireguard@127.0.0.1:1080 https://api.ipify.org
+curl --proxy socks5://127.0.0.1:1080 ipinfo.io
 ```
-
-Built images published @ https://hub.docker.com/r/diwu1989/wireguardproxy

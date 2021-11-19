@@ -7,4 +7,5 @@ COPY ./sockd.conf /etc/
 COPY entrypoint.sh /entrypoint.sh
 
 EXPOSE 1080/tcp
+
 CMD ["tini", "--", "/entrypoint.sh"]
