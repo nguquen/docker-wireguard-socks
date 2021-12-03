@@ -50,7 +50,7 @@ echo "precedence ::ffff:0:0/96  100" >> /etc/gai.conf
 # Healthcheck
 (
     set +e
-    INTERVAL="5"
+    INTERVAL="120"
     echo "Healthcheck in background every $INTERVAL seconds"
     FAILED=0
     while true; do
